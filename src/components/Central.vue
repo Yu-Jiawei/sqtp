@@ -1,7 +1,10 @@
 <template>
   <v-app id="inspire">
-    <v-content>
-      <v-container
+    <div class="background">
+    <img :src="imgSrc" width="100%" height="100%" alt="" />
+    </div>
+    <v-content >
+      <v-container 
       class="fill-height"
       fluid>
         <v-row
@@ -22,7 +25,7 @@
       </v-container>
     </v-content>
     
-    <v-content>
+    <v-content >
       <v-container
         class="fill-height"
         fluid
@@ -34,7 +37,7 @@
           <div id="description">
             <div style="position:relative;
                         width:500px; margin:0 auto;"
-            class="grey--text"
+            class="black--text"
             >
               本项目旨在帮助初入计算机专业的同学们规划自己将来的职业生涯。
               输入你感兴趣的计算机职业（硬件、前端、数据库乃至全栈工程师）
@@ -100,7 +103,8 @@ import Bmob from "hydrogen-js-sdk";
     },
     data(){
       return{
-        query:''
+        query:'',
+        imgSrc:require('../assets/background.png')
       }
     },
     methods:{
@@ -124,3 +128,14 @@ import Bmob from "hydrogen-js-sdk";
     }
   }
 </script>
+<style>
+.background{
+    width:100%;  
+    height:100%;
+    position: absolute;
+    opacity:0.18;
+    margin-top:-70px;
+}
+
+</style>
+
